@@ -1,0 +1,48 @@
+{%extends 'base.html' %}
+{% load static %}
+
+{%block title %}Result: {{result1}}{% endblock %}
+
+{% block content %}
+    
+    {% if result1 == "Diabetic" %}<h3 style="margin-bottom: 20px; color: tomato;">Result: {{result1}}</h3>{% endif %}
+    {% if result1 == "Not Diabetic" %}<h3 style="margin-bottom: 20px; color:limegreen;">Result: {{result1}}</h3>{% endif %}
+
+    {% if result1 == "Diabetic" %}
+    <div class="row">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8">
+            <h3 style="margin: 20px;">You are Likely to have diabetes. You must consult a Doctor as soon as Possible.</h3>
+            <p>According to our prediction system you are very likely to have diabetes but don't worry, diabetes can be managed
+                with good diet and healthy lifestyle. Healthy eating is a central part of managing diabetes. In some cases, 
+                changing your diet may be enough to control the disease. This is a very common disease and a lot of medications 
+                are available.
+            </p>
+            <p>Diabetes is a chronic diseases and a comorbidity that can give rise to many undesirable health conditions.
+                Thus you must keep consult a doctor regularly to manage the disease so that you can have control over it before 
+                it gets control over you.
+            </p>
+            <a href="{% url 'predict' %}" type="button" class="newbutton btn btn-light" style="margin-bottom: 20px;">Test Again</a>
+        </div>
+    </div>
+    {% endif %}
+
+    {% if result1 == "Not Diabetic" %}
+    <div class="row">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8">
+            <h3 style="margin: 20px;">Congratulations!! You are Diabetes Free</h3>
+            <p>Diabetes is a disease that occurs when your blood glucose, also called blood sugar, is too high.
+                You are more likely to develop type 2 diabetes if you are age 45 or older, have a family history 
+                of diabetes, or are overweight. Physical inactivity, race, and certain health problems such as high 
+                blood pressure also affect your chance of developing type 2 diabetes.
+            </p>
+            <p>Diabetes is a chronic diseases and a comorbidity that can give rise to many undesirable health conditions.
+                Thus you must keep getting tested regularly so that you can have control over it before it gets control over you.
+            </p>
+            <a href="{% url 'predict' %}" type="button" class="newbutton btn btn-light" style="margin-bottom: 20px;">Test Again</a>
+        </div>
+    </div>
+    {% endif %}
+    
+{% endblock %}

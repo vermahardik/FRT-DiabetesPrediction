@@ -1,0 +1,49 @@
+{%extends 'base.html' %}
+{% load static %}
+
+{%block title %}Predict Diabetes{% endblock %}
+
+{% block content %}
+                    
+                    <form action="result" class="bannerbody">
+                        {% csrf_token %}
+                        <h3 style="margin-bottom: 20px;">Enter the following details: </h3>
+                    
+                        <table align="center" style="text-align: left;"> 
+                            <tr>
+                                <td>Glucose: </td>
+                                <td><input type="text" name="n2"></td>
+                            </tr>
+                            <tr>
+                                <td>Blood Pressure in mm Hg: </td>
+                                <td><input type="text" name="n3"></td>
+                            </tr>
+                            <tr>
+                                <td>No. of Pregnencies: </td>
+                                <td><input type="text" name="n1"></td>
+                            </tr>
+                            <tr>
+                                <td>Skin Thickness in mm: </td>
+                                <td><input type="text" name="n4"></td>
+                            </tr>
+                            <tr>
+                                <td>Insulin in mu U/ml: </td>
+                                <td><input type="text" name="n5"></td>
+                            </tr>
+                            <tr>
+                                <td>Body Mass Index in kg/m2: </td>
+                                <td><input type="text" name="n6"></td>
+                            </tr>
+                            <tr>
+                                <td>Diabetes Pedigree Function: &emsp;</td>
+                                <td><input type="text" name="n7"></td>
+                            </tr>
+                            <tr>
+                                <td>Age in years: </td>
+                                <td><input type="text" name="n8"></td>
+                            </tr>
+                        </table>
+                        <input type="submit" value="Submit" class="newbutton btn btn-light" style="margin:20px 0px">
+                    </form>
+
+{% endblock %}

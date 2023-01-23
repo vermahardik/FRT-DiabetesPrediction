@@ -1,0 +1,48 @@
+{%extends 'base.html' %}
+{% load static %}
+
+{%block title %}Registration{% endblock %}
+
+{% block content %}
+                    
+                    <form action="" method="post" class="bannerbody">
+                        {% csrf_token %}
+                        <h3 style="margin-bottom: 20px;">New User Registration: </h3>
+                        <p>Already have an Account? <a href="{% url 'login' %}" style="color: white;"><u>Login here</u></a></p>
+
+                        <div style="margin-bottom: 25px;">
+                        {% for message in messages %}
+                            <span style="color:#FFD100;">* * * {{message}} * * *</span><br>
+                        {% endfor %}
+                        </div>
+                    
+                        <table align="center" style="text-align: left;"> 
+                            <tr>
+                                <td>First Name: </td>
+                                <td><input type="text" name="first_name"></td>
+                            </tr>
+                            <tr>
+                                <td>Last Name: </td>
+                                <td><input type="text" name="last_name"></td>
+                            </tr>
+                            <tr>
+                                <td>Username: </td>
+                                <td><input type="text" name="username"></td>
+                            </tr>
+                            <tr>
+                                <td>Email: </td>
+                                <td><input type="text" name="email"></td>
+                            </tr>
+                            <tr>
+                                <td>Password: </td>
+                                <td><input type="text" name="password1"></td>
+                            </tr>
+                            <tr>
+                                <td>Confirm Password: &emsp;</td>
+                                <td><input type="text" name="password2"></td>
+                            </tr>
+                        </table>
+                        <input type="submit" value="Submit" class="btn btn-light" style="margin:20px 0px">
+                    </form>
+
+{% endblock %}
