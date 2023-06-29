@@ -15,6 +15,7 @@ Have a look at the project [here](https://diab2.azurewebsites.net/)
 ![HomePage](https://storagefrt123.blob.core.windows.net/static/images/homepage.jpeg)
 
 ### Technologies Used
+Technologies used at a glance are:
 ![image](https://github.com/vermahardik/FRT-DiabetesPrediction/assets/82748478/12270789-b35d-4dcc-b6c3-a5d2d9541a5d)
 
 1. The project uses Machine Learning Binary Classification model Random Forest Classifier to find an accurate result.
