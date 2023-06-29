@@ -17,7 +17,10 @@ Have a look at the project [here](https://diab2.azurewebsites.net/)
 ### Technologies Used
 1. The project uses Machine Learning Binary Classification model Random Forest Classifier to find an accurate result.
 2. It is built using HTML, CSS and Javascript for the frontend and python-based framework Django for the backend.
-3. It is connected to Azure SQL Database Server in the backend. 
+3. It is connected to Azure SQL Database Server in the backend.
+
+![AzureSQL](https://storagefrt123.blob.core.windows.net/static/images/AzureSQL.png)
+  
 4. Azure Blob Storage is used for storing static files.
 
 ![BlobStorage](https://storagefrt123.blob.core.windows.net/static/images/Blob.png)
